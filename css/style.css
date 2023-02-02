@@ -1,66 +1,179 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap');
 
 * {
-    box-sizing: border-box;
-}
-body {
-    font-family: 'Montserrat', sans-serif;
-    margin: 0;
-    background-color: #EBEBED;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  background-color: #ebebed;
+}
+
+
+/* HEADER */
 header {
-    position: absolute;
-    width: 100%;
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8vw 5vw 0 ;
+  background-color: #1b212d;
+}
+
+.logo-cont {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 5vw;
-    background-color: #1b212d;
+    align-items: center;    
+}
+
+.logo-cont h1 {
+    color: #ebebed;
 }
 
 .logo {
-    width: 50px;
-    height: 50px;
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
 }
 
 li {
-    list-style: none;
-    display: inline-block;
-    margin-right: 10px;
+  font-size: 1.2em;
+  list-style: none;
+  display: inline-block;
+  margin-right: 10px;
 }
 
 a {
-    text-decoration: none;
-    color: #fb6e1f;
+  text-decoration: none;
+  color: #fb6e1f;
 }
 
-section.product {
-    height: 100vh;
-    background-color: #1b212d;
-}
-
-section.about {
-    height: 100vh;
-    background-color: transparent;
-}
-
-section.contact {
-    height: 100vh;
-    background-color: #1b212d;
-}
 
 .download {
-    background: #fb6e1f;
-    color:#EBEBED;
-    padding: 8px 8px;
-    border-radius: 5px;
-    border: 1px solid #ed874c;
-    transition: all .3s;
+  background: #fb6e1f;
+  color: #ebebed;
+  font-size: 1em;
+  width: 100px;
+  height: 40px;
+  padding: 8px 8px;
+  border-radius: 5px;
+  border: 1px solid #ed874c;
+  transition: all 0.3s;
 }
 
 .download:hover {
-    cursor: pointer;
+  cursor: pointer;
+}
+
+
+/* PRODUCT SECTION */
+section.product {
+  padding: 8vw 5vw 0 ;
+  height: 100vh;
+  background-color: #1b212d;
+}
+
+.prod-info h1 {
+  font-size: 6em;
+  color: #ebebed;
+}
+
+.prod-info p {
+  font-size: 1.3em;
+  color: #ebebed;
+}
+
+/* ABOUT SECTION */
+section.about {
+  padding: 8vw 5vw 0 ;
+  height: 100vh;
+  background-color: transparent;
+  display: flex;
+  justify-content: end;
+  text-align: right;
+}
+
+.about-cont h1{
+  font-size: 6em;
+  color: #1b212d;
+
+}
+
+.about-cont p {
+  font-size: 1.3em;
+  color: #1b212d;
+}
+
+/* CONTACT SECTION */
+section.contact {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding: 8vw 5vw 0 ;
+  height: 100vh;
+  background-color: #1b212d;
+}
+
+/* CARDS */
+.card {
+  width: 320px;
+  height: 450px;
+  background-color: #ebebed;
+  border-radius: 5%;
+  padding: 4rem 2rem;
+}
+
+.card-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-pic {
+  width: 120px;
+  height: 120px;
+  transition: transform .2s ease;
+  margin-bottom: 1em;
+}
+
+.card-pic img {
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+}
+
+.card-pic:hover {
+ transform: scale(1.1);
+}
+
+.card-name {
+  margin-bottom: 0.5em;
+  color: #333;
+  font-size: 1.5em;
+  font-weight: 600;
+}
+
+.card-role {
+  color: #92999c;
+  font-size: 1.2em;
+  font-weight: 500;
+}
+
+.card-social {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: row;  
+  justify-content: space-evenly;
+}
+
+.social img {
+  width: 30px;
+  height: 30px;
 }
 
 html {
