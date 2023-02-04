@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap');
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -12,7 +16,6 @@ body {
   background-color: #ebebed;
 }
 
-
 /* HEADER */
 header {
   position: relative;
@@ -20,17 +23,17 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.8vw 5vw 0 ;
+  padding: 0.8vw 5vw 0;
   background-color: #1b212d;
 }
 
 .logo-cont {
-    display: flex;
-    align-items: center;    
+  display: flex;
+  align-items: center;
 }
 
 .logo-cont h1 {
-    color: #ebebed;
+  color: #ebebed;
 }
 
 .logo {
@@ -39,28 +42,27 @@ header {
   margin-right: 10px;
 }
 
-li {
+.links {
   font-size: 1.2em;
   list-style: none;
   display: inline-block;
   margin-right: 10px;
 }
 
-a {
+.links a {
   text-decoration: none;
   color: #fb6e1f;
 }
 
-
 .download {
   background: #fb6e1f;
-  color: #ebebed;
-  font-size: 1em;
-  width: 100px;
-  height: 40px;
+  color: #1b212d;
+  font-size: 1.2em;
+  width: 120px;
+  height: 50px;
   padding: 8px 8px;
-  border-radius: 5px;
-  border: 1px solid #ed874c;
+  border-radius: 20px;
+  border: 1px solid #1b212d;
   transition: all 0.3s;
 }
 
@@ -68,10 +70,9 @@ a {
   cursor: pointer;
 }
 
-
 /* PRODUCT SECTION */
 section.product {
-  padding: 8vw 5vw 0 ;
+  padding: 8vw 5vw 0;
   height: 100vh;
   background-color: #1b212d;
 }
@@ -88,7 +89,7 @@ section.product {
 
 /* ABOUT SECTION */
 section.about {
-  padding: 8vw 5vw 0 ;
+  padding: 8vw 5vw 0;
   height: 100vh;
   background-color: transparent;
   display: flex;
@@ -96,10 +97,9 @@ section.about {
   text-align: right;
 }
 
-.about-cont h1{
+.about-cont h1 {
   font-size: 6em;
   color: #1b212d;
-
 }
 
 .about-cont p {
@@ -110,21 +110,48 @@ section.about {
 /* CONTACT SECTION */
 section.contact {
   display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  padding: 8vw 5vw 0 ;
+  flex-direction: column;
+  padding: 8vw 5vw 0;
   height: 100vh;
   background-color: #1b212d;
 }
 
+.contact h1 {
+  font-size: 6em;
+  color: #ebebed;
+  text-align: center;
+  margin-bottom: 100px;
+}
+
 /* CARDS */
+.cards-cont {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  /* display: grid;
+  gap: 5rem;
+  grid-auto-rows: 22rem;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr)); */
+}
+
 .card {
   width: 320px;
   height: 450px;
   background-color: #ebebed;
   border-radius: 5%;
   padding: 4rem 2rem;
+  transition: box-shadow .3s ease, transform .2s ease;
+}
+
+/* .card:hover {
+  width: 370px;
+  height: 490px;
+  transition: 0.5s;
+} */
+
+.card:hover {
+  box-shadow: 0 0px 20px #ebebed;
 }
 
 .card-info {
@@ -137,7 +164,7 @@ section.contact {
 .card-pic {
   width: 120px;
   height: 120px;
-  transition: transform .2s ease;
+  transition: transform 0.2s ease;
   margin-bottom: 1em;
 }
 
@@ -148,7 +175,7 @@ section.contact {
 }
 
 .card-pic:hover {
- transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .card-name {
@@ -167,15 +194,58 @@ section.contact {
 .card-social {
   margin-top: 60px;
   display: flex;
-  flex-direction: row;  
+  flex-direction: row;
   justify-content: space-evenly;
 }
 
-.social img {
-  width: 30px;
-  height: 30px;
+.card-social li {
+  list-style: none;
 }
 
-html {
-    scroll-behavior: smooth;
+.social img {
+  width: 32px;
+  height: 32px;
+}
+
+footer {
+  width: 100%;
+  height: 6vw;
+  background-color: #ebebed;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+footer p {
+  font-size: 1.5em;
+  display: flex;
+}
+
+.f-links {
+  list-style: none;
+  display: inline-block;
+  font-size: 1.5em;
+}
+
+.f-links a {
+  color: #1b212d;
+  text-decoration: none;
+  margin-right: 30px;
+}
+
+.f-links a:hover {
+  color: #fb6e1f;
+}
+
+.f-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.f-info img {
+  margin-top: 10px;
+  width: 40px;
+  height: 40px;
 }
