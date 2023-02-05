@@ -13,23 +13,26 @@ html {
 body {
   font-family: 'Montserrat', sans-serif;
   margin: 0;
-  background-color: #ebebed;
+  background-color: #1b212d;
 }
 
 /* HEADER */
 header {
-  position: relative;
+  position: sticky;
+  top: 0px;
   width: 100%;
+  min-height: 75px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.8vw 5vw 0;
-  background-color: #1b212d;
+  padding: 0vw 5vw 0;
+  background-color: rgb(27, 33, 45, 0.85);
 }
 
 .logo-cont {
   display: flex;
   align-items: center;
+  width: 15%;
 }
 
 .logo-cont h1 {
@@ -47,6 +50,7 @@ header {
   list-style: none;
   display: inline-block;
   margin-right: 10px;
+  font-weight: bold;
 }
 
 .links a {
@@ -54,20 +58,38 @@ header {
   color: #fb6e1f;
 }
 
+.header-download-container {
+  display: flex;
+  justify-content: end;
+  width: 15%;
+}
+
 .download {
-  background: #fb6e1f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ededed;
   color: #1b212d;
-  font-size: 1.2em;
-  width: 120px;
-  height: 50px;
-  padding: 8px 8px;
-  border-radius: 20px;
-  border: 1px solid #1b212d;
+  font-size: 0.9em;
+  font-weight: bold;
+  padding: 10px 18px;
+  border-radius: 16px;
+  border: none;
   transition: all 0.3s;
+  gap: 4px;
 }
 
 .download:hover {
   cursor: pointer;
+}
+
+.download span {
+  padding-left: 6px;
+}
+
+.download img {
+  width: 20px;
+  height: 20px;
 }
 
 /* PRODUCT SECTION */
@@ -87,11 +109,15 @@ section.product {
   color: #ebebed;
 }
 
+.mobile-download-container {
+  visibility: hidden;
+}
+
 /* ABOUT SECTION */
 section.about {
   padding: 8vw 5vw 0;
   height: 100vh;
-  background-color: transparent;
+  background-color: #ebebed;
   display: flex;
   justify-content: end;
   text-align: right;
@@ -112,7 +138,7 @@ section.contact {
   display: flex;
   flex-direction: column;
   padding: 8vw 5vw 0;
-  height: 100vh;
+  min-height: 100vh;
   background-color: #1b212d;
 }
 
@@ -127,21 +153,18 @@ section.contact {
 .cards-cont {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
   flex-wrap: wrap;
-  /* display: grid;
-  gap: 5rem;
-  grid-auto-rows: 22rem;
-  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr)); */
+  justify-content: center;
 }
 
 .card {
-  width: 320px;
-  height: 450px;
+  width: 300px;
+  height: 400px;
   background-color: #ebebed;
   border-radius: 5%;
-  padding: 4rem 2rem;
-  transition: box-shadow .3s ease, transform .2s ease;
+  padding: 2rem 1.7rem 0.8rem;
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+  margin: 0.8rem;
 }
 
 /* .card:hover {
@@ -152,6 +175,11 @@ section.contact {
 
 .card:hover {
   box-shadow: 0 0px 20px #ebebed;
+  transform: scale(1.05);
+}
+
+.card:hover .card-pic {
+  transform: scale(1.05);
 }
 
 .card-info {
@@ -174,21 +202,18 @@ section.contact {
   height: 100%;
 }
 
-.card-pic:hover {
-  transform: scale(1.1);
-}
-
 .card-name {
-  margin-bottom: 0.5em;
+  margin: 0.5em;
   color: #333;
-  font-size: 1.5em;
+  font-size: 1.2rem;
   font-weight: 600;
 }
 
 .card-role {
   color: #92999c;
-  font-size: 1.2em;
+  font-size: 0.8rem;
   font-weight: 500;
+  margin-top: 0.5rem;
 }
 
 .card-social {
@@ -203,49 +228,186 @@ section.contact {
 }
 
 .social img {
-  width: 32px;
-  height: 32px;
+  width: 30px;
+  height: 30px;
 }
 
 footer {
   width: 100%;
-  height: 6vw;
+  padding: 1rem 5%;
   background-color: #ebebed;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
 footer p {
-  font-size: 1.5em;
+  font-size: 1.2em;
   display: flex;
 }
 
-.f-links {
-  list-style: none;
-  display: inline-block;
-  font-size: 1.5em;
+.footer-links-cont {
+  width: 350px;
 }
 
-.f-links a {
+.footer-links {
+  list-style: none;
+  display: inline-block;
+  font-size: 1em;
+}
+
+.footer-links a {
   color: #1b212d;
   text-decoration: none;
   margin-right: 30px;
 }
 
-.f-links a:hover {
+.footer-links a:hover {
   color: #fb6e1f;
 }
 
-.f-info {
+.footer-logo {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
-.f-info img {
-  margin-top: 10px;
-  width: 40px;
-  height: 40px;
+.footer-logo-cont {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.footer-social {
+  width: 350px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: end;
+}
+
+.footer-social img {
+  margin-left: 10px;
+  width: 30px;
+  height: 30px;
+}
+
+/* TABLET RESPONSIVE */
+@media (max-width: 1100px) {
+  .footer-links-cont {
+    width: 200px;
+  }
+
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+  }
+
+  .footer-logo p {
+    font-size: 0.8rem;
+  }
+
+  .footer-social {
+    width: 200px;
+  }
+
+  .footer-social h2 {
+    font-size: 1.2rem;
+  }
+
+  .footer-social img {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 860px) {
+  header ul {
+    visibility: hidden;
+  }
+
+  .header-download-container {
+    visibility: hidden;
+  }
+
+  .mobile-download-container {
+    visibility: visible;
+  }
+
+  .mobile-download {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ededed;
+    color: #1b212d;
+    font-size: 0.9em;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 16px;
+    border: none;
+    transition: all 0.3s;
+    gap: 4px;
+  }
+
+  .mobile-download:hover {
+    cursor: pointer;
+  }
+
+  .mobile-download span {
+    padding-left: 6px;
+  }
+
+  .mobile-download img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .logo {
+    width: 35px;
+    height: 35px;
+  }
+
+  .logo-cont h1 {
+    font-size: 1.2rem;
+  }
+
+  .prod-info h1 {
+    font-size: 2.5em;
+    color: #ebebed;
+  }
+
+  .prod-info p {
+    margin-top: 0.6em;
+    font-size: 1em;
+    color: #ebebed;
+  }
+
+  .about-cont h1 {
+    font-size: 2.5em;
+    color: #1b212d;
+  }
+
+  .about-cont p {
+    margin-top: 0.6em;
+    font-size: 1em;
+    color: #1b212d;
+  }
+
+  .contact h1 {
+    font-size: 2.5em;
+  }
+
+  .card:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  .card:hover .card-pic {
+    transform: none;
+  }
 }

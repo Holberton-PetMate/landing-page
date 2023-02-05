@@ -4,6 +4,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/style.css" />
+    <!-- <script src="./main.js"></script> -->
     <title>PetMate</title>
   </head>
 
@@ -20,7 +21,11 @@
           <li class="links"><a href="#contact-section">Contact Us</a></li>
         </ul>
       </nav>
-      <button class="download" role="button">Descargar</button>
+      <div class="header-download-container">
+        <button class="download" role="button">
+          <span>Download</span> <img src="./images/arrow.svg" alt="" />
+        </button>
+      </div>
     </header>
     <main>
       <section id="product-section" class="product">
@@ -29,11 +34,15 @@
           <p>
             We know that your pet is important to you, and therefore its
             nutrition. <br />
-            That's why we created PetMate. We aim to ensure your pet's feeding
-            <br />
-            through our automatic feeder so that this task is no longer a
-            concern ;)
+            That's why we created PetMate. We aim to ensure your <br />
+            pet's feeding through our automatic feeder so that this <br />
+            task is no longer a concern ;)
           </p>
+          <div class="mobile-download-container">
+            <button class="mobile-download" role="button">
+              <span>Download</span> <img src="./images/arrow.svg" alt="" />
+            </button>
+          </div>
         </div>
       </section>
       <section id="about-section" class="about">
@@ -41,11 +50,11 @@
           <h1>About Us</h1>
           <p>
             Somos un grupo de estudiantes de Holberton School. <br />
-            Parta nuestro MVP decidimos crear PetMate, para ayudar a personas
-            dueñas de mascotas, <br />
-            que quieran facilitar la tarea de alimentarlos o para personas que
-            esten mucho tiempo fuera de su hogar <br />
-            y no como alimentar a sus mascotas
+            Parta nuestro MVP decidimos crear PetMate, <br />
+            para ayudar a personas dueñas de mascotas, <br />
+            que quieran facilitar la tarea de alimentarlos <br />
+            o para personas que esten mucho tiempo <br />
+            fuera de su hogar y no como alimentar a sus mascotas.
           </p>
         </div>
       </section>
@@ -56,7 +65,7 @@
             <div class="card-info">
               <div class="card-pic"><img src="./images/toti.jpg" alt="" /></div>
               <div class="card-name">Santiago Fernandez</div>
-              <div class="card-role">Front-End</div>
+              <div class="card-role">Front-End Developer</div>
             </div>
             <ul class="card-social">
               <li class="social">
@@ -67,7 +76,9 @@
                 /></a>
               </li>
               <li class="social">
-                <a href="mailto: santifer4321@gmail.com"><img src="./images/mail.svg" alt="" /></a>
+                <a href="mailto: santifer4321@gmail.com"
+                  ><img src="./images/mail.svg" alt=""
+                /></a>
               </li>
               <li class="social">
                 <a target="_blank" href="https://www.instagram.com/toti_flame/"
@@ -78,9 +89,11 @@
           </div>
           <div class="card">
             <div class="card-info">
-              <div class="card-pic"><img src="./images/bel.png" alt="" /></div>
+              <div class="card-pic"><img src="./images/belu.JPG" alt="" /></div>
               <div class="card-name">Belen Matto</div>
-              <div class="card-role">Front-End</div>
+              <div class="card-role">
+                <p>Front-End Developer</p>
+              </div>
             </div>
             <ul class="card-social">
               <li class="social">
@@ -108,7 +121,7 @@
                 <img src="./images/cachu.jpg" alt="" />
               </div>
               <div class="card-name">Nahuel Alvarez</div>
-              <div class="card-role">Full-Stack & Hardware</div>
+              <div class="card-role">Full-Stack & Hardware Developer</div>
             </div>
             <ul class="card-social">
               <li class="social">
@@ -136,7 +149,7 @@
                 <img src="./images/nacho.jpg" alt="" />
               </div>
               <div class="card-name">Ignacio Castro</div>
-              <div class="card-role">Full-Stack</div>
+              <div class="card-role">Full-Stack Developer</div>
             </div>
             <ul class="card-social">
               <li class="social">
@@ -162,7 +175,7 @@
             <div class="card-info">
               <div class="card-pic"><img src="./images/facu.jpg" alt="" /></div>
               <div class="card-name">Facundo Blanco</div>
-              <div class="card-role">Back-End</div>
+              <div class="card-role">Back-End Developer</div>
             </div>
             <ul class="card-social">
               <li class="social">
@@ -187,15 +200,25 @@
         </div>
       </section>
       <footer>
-        <p>Copyright &copy; PetMate 2023</p>
-        <ul>
-          <li class="f-links"><a href="#product-section">Product</a></li>
-          <li class="f-links"><a href="#about-section">About Us</a></li>
-          <li class="f-links"><a href="#contact-section">Contact Us</a></li>
-        </ul>
-        <div class="f-info">
+        <div class="footer-links-cont">
+          <ul>
+            <li class="footer-links"><a href="#product-section">Product</a></li>
+            <li class="footer-links"><a href="#about-section">About Us</a></li>
+            <li class="footer-links">
+              <a href="#contact-section">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-logo">
+          <div class="footer-logo-cont">
+            <img class="logo" src="./images/logo.png" alt="" />
+            <h1>PetMate</h1>
+          </div>
+          <p>Copyright &copy; PetMate 2023</p>
+        </div>
+        <div class="footer-social">
           <h2>Follow us on:</h2>
-            <img src="./images/instagram.svg" alt="">
+          <img src="./images/instagram.svg" alt="" />
         </div>
       </footer>
     </main>
