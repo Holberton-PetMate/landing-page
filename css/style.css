@@ -58,6 +58,10 @@ header {
   color: #fb6e1f;
 }
 
+.links:hover a {
+  color: #f78725;
+}
+
 .header-download-container {
   display: flex;
   justify-content: end;
@@ -81,6 +85,7 @@ header {
 
 .download:hover {
   cursor: pointer;
+  opacity: 90%;
 }
 
 .download span {
@@ -90,6 +95,36 @@ header {
 .download img {
   width: 20px;
   height: 20px;
+}
+
+.header-menu {
+  display: none;
+}
+
+.nav-elements {
+  display: none;
+  background-color: #ededed;
+  position: fixed;
+  box-shadow: 0px 8px 16px 0px black;
+  min-width: 140px;
+  max-width: 140px;
+  right: 10px;
+}
+
+.nav-elements a {
+  color: #1b212d;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.nav-elements a:hover {
+  background-color: #eae8e8;
+  color: #fb6e1f;
+}
+
+.header-menu:hover .nav-elements {
+  display: block;
 }
 
 /* PRODUCT SECTION */
@@ -356,6 +391,7 @@ footer p {
 
   .mobile-download:hover {
     cursor: pointer;
+    opacity: 90%;
   }
 
   .mobile-download span {
@@ -365,6 +401,10 @@ footer p {
   .mobile-download img {
     width: 20px;
     height: 20px;
+  }
+
+  .header-menu {
+    display: block;
   }
 
   .logo {
