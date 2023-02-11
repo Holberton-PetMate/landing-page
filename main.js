@@ -1,5 +1,12 @@
-/*const headerMenu = document.querySelector('.header-menu');
+document.addEventListener('DOMContentLoaded', () => {
+  const nav = document.querySelector('#mobile-nav');
+  const button = document.querySelector('#menu-icon');
 
-headerMenu.addEventListener('click', function() {
-  headerMenu.classList.toggle('visible');
-}); */
+  button.addEventListener('click', () => {
+    if (nav.classList.contains('show')) {
+      nav.classList.remove('show');
+    } else {
+      nav.classList.add('show');
+    }
+  });
+});

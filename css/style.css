@@ -18,7 +18,7 @@ body {
 
 /* HEADER */
 header {
-  position: sticky;
+  position: fixed;
   top: 0px;
   width: 100%;
   min-height: 75px;
@@ -27,6 +27,10 @@ header {
   align-items: center;
   padding: 0vw 5vw 0;
   background-color: rgb(27, 33, 45, 0.85);
+}
+
+#mobile-nav {
+  display: none;
 }
 
 .logo-cont {
@@ -46,7 +50,7 @@ header {
 }
 
 .links {
-  font-size: 1.2em;
+  font-size: 1.2rem;
   list-style: none;
   display: inline-block;
   margin-right: 10px;
@@ -56,10 +60,6 @@ header {
 .links a {
   text-decoration: none;
   color: #fb6e1f;
-}
-
-.links:hover a {
-  color: #f78725;
 }
 
 .header-download-container {
@@ -85,7 +85,7 @@ header {
 
 .download:hover {
   cursor: pointer;
-  opacity: 90%;
+  background-color: #cac9c9;
 }
 
 .download span {
@@ -97,55 +97,52 @@ header {
   height: 20px;
 }
 
-.header-menu {
+#menu-icon {
   display: none;
-}
-
-.nav-elements {
-  display: none;
-  background-color: #ededed;
-  position: fixed;
-  box-shadow: 0px 8px 16px 0px black;
-  min-width: 140px;
-  max-width: 140px;
-  right: 10px;
-}
-
-.nav-elements a {
-  color: #1b212d;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-.nav-elements a:hover {
-  background-color: #eae8e8;
-  color: #fb6e1f;
-}
-
-.header-menu:hover .nav-elements {
-  display: block;
 }
 
 /* PRODUCT SECTION */
 section.product {
+  display: flex;
+  justify-content: space-between;
   padding: 8vw 5vw 0;
   height: 100vh;
   background-color: #1b212d;
 }
 
+.prod-info {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 0 8rem 0;
+}
+
 .prod-info h1 {
-  font-size: 6em;
+  font-size: 4rem;
   color: #ebebed;
+  margin-bottom: 0.8rem;
 }
 
 .prod-info p {
-  font-size: 1.3em;
+  font-size: 1em;
   color: #ebebed;
 }
 
 .mobile-download-container {
   visibility: hidden;
+}
+
+.product-image {
+  display: flex;
+  width: 45%;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.product-image img {
+  height: 80%;
+  margin-bottom: 1rem;
 }
 
 /* ABOUT SECTION */
@@ -158,13 +155,18 @@ section.about {
   text-align: right;
 }
 
+.about-cont {
+  width: 45%;
+  margin-bottom: 0.8rem;
+}
+
 .about-cont h1 {
-  font-size: 6em;
+  font-size: 4rem;
   color: #1b212d;
 }
 
 .about-cont p {
-  font-size: 1.3em;
+  font-size: 1rem;
   color: #1b212d;
 }
 
@@ -178,7 +180,7 @@ section.contact {
 }
 
 .contact h1 {
-  font-size: 6em;
+  font-size: 4em;
   color: #ebebed;
   text-align: center;
   margin-bottom: 100px;
@@ -195,18 +197,14 @@ section.contact {
 .card {
   width: 300px;
   height: 400px;
+  display: flex;
+  flex-direction: column;
   background-color: #ebebed;
   border-radius: 5%;
   padding: 2rem 1.7rem 0.8rem;
   transition: box-shadow 0.3s ease, transform 0.2s ease;
   margin: 0.8rem;
 }
-
-/* .card:hover {
-  width: 370px;
-  height: 490px;
-  transition: 0.5s;
-} */
 
 .card:hover {
   box-shadow: 0 0px 20px #ebebed;
@@ -252,10 +250,11 @@ section.contact {
 }
 
 .card-social {
-  margin-top: 60px;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  flex-grow: 1;
+  align-items: center;
 }
 
 .card-social li {
@@ -365,12 +364,47 @@ footer p {
     visibility: hidden;
   }
 
+  header {
+    position: sticky;
+  }
+
   .header-download-container {
     visibility: hidden;
+    
+  }
+
+  #menu-icon {
+    display: block;
   }
 
   .mobile-download-container {
     visibility: visible;
+  }
+
+  
+  #mobile-nav {
+    position: fixed;
+    background-color: #1b212d;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 75px;
+  }
+  
+  #mobile-nav.show {
+    display: flex;
+  }
+
+  #mobile-nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+
+  #mobile-nav ul li {
+    display: block;
   }
 
   .mobile-download {
@@ -391,7 +425,6 @@ footer p {
 
   .mobile-download:hover {
     cursor: pointer;
-    opacity: 90%;
   }
 
   .mobile-download span {
@@ -403,10 +436,6 @@ footer p {
     height: 20px;
   }
 
-  .header-menu {
-    display: block;
-  }
-
   .logo {
     width: 35px;
     height: 35px;
@@ -416,30 +445,76 @@ footer p {
     font-size: 1.2rem;
   }
 
+  section.product {
+    display: flex;
+    flex-direction: column;
+    padding: 4vw 5vw 0;
+    height: 100vh;
+    background-color: #1b212d;
+  }
+
+  .prod-info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 0;
+  }
+
   .prod-info h1 {
-    font-size: 2.5em;
+    font-size: 2em;
     color: #ebebed;
   }
 
   .prod-info p {
     margin-top: 0.6em;
-    font-size: 1em;
+    font-size: 0.8em;
     color: #ebebed;
   }
 
+  .product-image {
+    width: auto;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5rem;
+  }
+
+  .product-image img {
+    height: 200px;
+    margin-bottom: 5rem;
+  }
+
+  section.about {
+    flex-direction: column;
+    justify-content: start;
+  }
+
+  .about-cont {
+    width: 100%;
+    margin-top: 2rem;
+  }
+
   .about-cont h1 {
-    font-size: 2.5em;
+    font-size: 2em;
     color: #1b212d;
   }
 
   .about-cont p {
     margin-top: 0.6em;
-    font-size: 1em;
+    font-size: 0.8em;
     color: #1b212d;
   }
 
   .contact h1 {
     font-size: 2.5em;
+    margin-bottom: 4rem;
+  }
+
+  .card {
+    width: 300px;
+    height: 150px;
+    padding: 0.5rem 0 0.5rem 0;
+    margin: 0.8rem;
   }
 
   .card:hover {
@@ -449,5 +524,49 @@ footer p {
 
   .card:hover .card-pic {
     transform: none;
+  }
+
+  .card-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card-pic {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 0em;
+  }
+
+  .card-pic img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .card-name {
+    margin: 0.3rem;
+    font-size: 1rem;
+  }
+
+  .card-role {
+    font-size: 0.6rem;
+    margin-top: 0rem;
+  }
+
+  .card-social {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .card-social li {
+    list-style: none;
+  }
+
+  .social img {
+    width: 20px;
+    height: 20px;
   }
 }

@@ -4,7 +4,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/style.css" />
-    <!-- <script src="./main.js"></script> -->
+    <script src="./main.js"></script>
     <title>PetMate</title>
   </head>
 
@@ -14,7 +14,7 @@
         <img class="logo" src="./images/logo.png" alt="" />
         <h1>PetMate</h1>
       </div>
-      <nav>
+      <nav class="header-nav">
         <ul>
           <li class="links"><a href="#product-section">Product</a></li>
           <li class="links"><a href="#about-section">About Us</a></li>
@@ -26,26 +26,26 @@
           <span>Download</span> <img src="./images/arrow.svg" alt="" />
         </button>
       </div>
-
-      <div class="header-menu">
-        <img class="menu-icon" src="./images/arrow.svg" alt="" />
-        <div class="nav-elements">
-          <a href="#product-section">Product</a>
-          <a href="#about-section">About Us</a>
-          <a href="#contact-section">Contact Us</a>
-        </div>
+      <div id="menu-icon">
+        <img src="./images/menu-icon.png" alt="" />
       </div>
     </header>
+    <nav id="mobile-nav">
+      <ul>
+        <li class="links"><a href="#product-section">Product</a></li>
+        <li class="links"><a href="#about-section">About Us</a></li>
+        <li class="links"><a href="#contact-section">Contact Us</a></li>
+      </ul>
+    </nav>
     <main>
       <section id="product-section" class="product">
         <div class="prod-info">
           <h1>PetMate</h1>
           <p>
             We know that your pet is important to you, and therefore its
-            nutrition. <br />
-            That's why we created PetMate. We aim to ensure your <br />
-            pet's feeding through our automatic feeder so that this <br />
-            task is no longer a concern ;)
+            nutrition. That's why we created PetMate. We aim to ensure your
+            pet's feeding through our automatic feeder so that this task is no
+            longer a concern ;)
           </p>
           <div class="mobile-download-container">
             <button class="mobile-download" role="button">
@@ -53,17 +53,19 @@
             </button>
           </div>
         </div>
+        <div class="product-image">
+          <img src="./images/product-image.png" alt="" />
+        </div>
       </section>
       <section id="about-section" class="about">
         <div class="about-cont">
           <h1>About Us</h1>
           <p>
-            Somos un grupo de estudiantes de Holberton School. <br />
-            Parta nuestro MVP decidimos crear PetMate, <br />
-            para ayudar a personas dueñas de mascotas, <br />
-            que quieran facilitar la tarea de alimentarlos <br />
-            o para personas que esten mucho tiempo <br />
-            fuera de su hogar y no como alimentar a sus mascotas.
+            Somos un grupo de estudiantes de Holberton School. Para nuestro MVP
+            decidimos crear PetMate, para ayudar a personas dueñas de mascotas,
+            que quieran facilitar la tarea de alimentarlos o para personas que
+            esten mucho tiempo fuera de su hogar y no como alimentar a sus
+            mascotas.
           </p>
         </div>
       </section>
