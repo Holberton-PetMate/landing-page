@@ -330,6 +330,7 @@ footer p {
 
 /* TABLET RESPONSIVE */
 @media (max-width: 1100px) {
+
   .footer-links-cont {
     width: 200px;
   }
@@ -380,7 +381,6 @@ footer p {
   .mobile-download-container {
     visibility: visible;
   }
-
   
   #mobile-nav {
     position: fixed;
@@ -449,7 +449,7 @@ footer p {
     display: flex;
     flex-direction: column;
     padding: 4vw 5vw 0;
-    height: 100vh;
+    height: 60vh;
     background-color: #1b212d;
   }
 
@@ -476,17 +476,18 @@ footer p {
     width: auto;
     display: flex;
     justify-content: center;
-    margin-bottom: 5rem;
+    margin: 2rem 0 1rem 0;
   }
 
   .product-image img {
     height: 200px;
-    margin-bottom: 5rem;
+    margin-bottom: 0rem;
   }
 
   section.about {
     flex-direction: column;
     justify-content: start;
+    height: 60vh;
   }
 
   .about-cont {
@@ -508,6 +509,10 @@ footer p {
   .contact h1 {
     font-size: 2.5em;
     margin-bottom: 4rem;
+  }
+
+  .cards-cont .card:nth-child(5){
+    margin-bottom: 2rem;
   }
 
   .card {
@@ -568,5 +573,32 @@ footer p {
   .social img {
     width: 20px;
     height: 20px;
+  }
+
+  footer {
+    flex-direction: column;
+  }
+
+  .footer-links-cont {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .footer-logo {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .footer-social {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .footer-links {
+    margin: 1rem 0;
+  }
+
+  .footer-links a {
+    margin: 0;
   }
 }
