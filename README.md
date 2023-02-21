@@ -8,7 +8,7 @@
 
 <p align="center">Discover more about us in our 
 	<a target="_blank"
-	href="petmate.tech/">PetMate</a> 
+	href="http:petmate.tech/">PetMate</a> 
 	page :)</p>
 
 ## Repository files
