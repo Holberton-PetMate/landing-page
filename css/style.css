@@ -16,6 +16,10 @@ body {
   background-color: #1b212d;
 }
 
+.social:hover {
+  filter: drop-shadow(3px 3px 5px #1b212d6e);
+}
+
 /* HEADER */
 header {
   position: fixed;
@@ -27,6 +31,7 @@ header {
   align-items: center;
   padding: 0vw 5vw 0;
   background-color: rgb(27, 33, 45, 0.85);
+  z-index: 10;
 }
 
 p {
@@ -64,6 +69,11 @@ p {
 .links a {
   text-decoration: none;
   color: #fb6e1f;
+  opacity: 80%;
+}
+
+.links a:hover {
+  opacity: 100%;
 }
 
 .header-download-container {
@@ -180,6 +190,11 @@ section.about {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.aboutUs:hover, .aboutUs-image:hover {
+  transform: scale(1.05);
 }
 
 .aboutUs-image img {
@@ -318,6 +333,7 @@ footer p {
 
 .footer-links a:hover {
   color: #fb6e1f;
+  font-weight: 500;
 }
 
 .footer-logo {
@@ -469,7 +485,7 @@ footer p {
     display: flex;
     flex-direction: column;
     padding: 4vw 5vw 0;
-    height: 60vh;
+    height: 700px;
     background-color: #1b212d;
   }
 
@@ -496,18 +512,18 @@ footer p {
     width: auto;
     display: flex;
     justify-content: center;
-    margin: 2rem 0 1rem 0;
+    margin-bottom: 50px;
   }
 
   .product-image img {
-    height: 200px;
+    height: 250px;
     margin-bottom: 0rem;
   }
 
   section.about {
     flex-direction: column;
     justify-content: start;
-    height: 60vh;
+    height: 650px
   }
   
   .aboutUs-image {
