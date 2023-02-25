@@ -155,7 +155,7 @@ section.about {
   height: 100vh;
   background-color: #ebebed;
   display: flex;
-  justify-content: end;
+  justify-content: space-between;
   text-align: right;
 }
 
@@ -173,6 +173,20 @@ section.about {
   font-size: 1rem;
   color: #1b212d;
   padding-top: 0.8px;
+}
+
+.aboutUs-image {
+  width: 20%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.aboutUs-image img {
+  height: 60%;
+  margin-bottom: 5rem;
+  border-radius: 1rem;
+  filter: drop-shadow(5px 5px 10px #1b212dc1);
 }
 
 /* CONTACT SECTION */
@@ -328,9 +342,10 @@ footer p {
 }
 
 .footer-social img {
+  width: 35px;
+  height: 35px;
   margin-left: 10px;
-  width: 30px;
-  height: 30px;
+  margin-top: 5px;
 }
 
 /* TABLET RESPONSIVE */
@@ -493,6 +508,18 @@ footer p {
     flex-direction: column;
     justify-content: start;
     height: 60vh;
+  }
+  
+  .aboutUs-image {
+    width: auto;
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0 1rem 0;
+  }
+
+  .aboutUs-image img {
+    height: 200px;
+    margin-bottom: 0rem;
   }
 
   .about-cont {
