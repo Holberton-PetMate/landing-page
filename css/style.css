@@ -129,7 +129,8 @@ section.product {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0 0 8rem 0;
+  padding: 0 5rem 8rem 0;
+  margin-right: 5rem;
 }
 
 .prod-info h1 {
@@ -166,6 +167,7 @@ section.about {
   background-color: #ebebed;
   display: flex;
   justify-content: space-between;
+  align-items: space-around;
   text-align: right;
 }
 
@@ -186,19 +188,14 @@ section.about {
 }
 
 .aboutUs-image {
-  width: 20%;
+  width: 50%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  transition: box-shadow 0.3s ease, transform 0.2s ease;
-}
-
-.aboutUs:hover, .aboutUs-image:hover {
-  transform: scale(1.05);
 }
 
 .aboutUs-image img {
-  height: 60%;
+  width: 100%;
   margin-bottom: 5rem;
   border-radius: 1rem;
   filter: drop-shadow(5px 5px 10px #1b212dc1);
@@ -534,7 +531,7 @@ footer p {
   }
 
   .aboutUs-image img {
-    height: 200px;
+    width: 65%;
     margin-bottom: 0rem;
   }
 
