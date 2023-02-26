@@ -432,6 +432,7 @@ footer p {
   
   #mobile-nav.show {
     display: flex;
+    z-index: 10;
   }
 
   #mobile-nav ul {
