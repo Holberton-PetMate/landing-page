@@ -129,7 +129,7 @@ section.product {
 }
 
 .prod-info {
-  width: 45%;
+  width: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -152,16 +152,16 @@ section.product {
   visibility: hidden;
 }
 
-.product-image {
+.demo-image {
   display: flex;
   width: 45%;
   justify-content: flex-end;
   align-items: flex-end;
 }
 
-.product-image img {
-  height: 80%;
-  margin-bottom: 1rem;
+.demo-image img {
+  height: 90%;
+  margin-bottom: 4rem;
 }
 
 /* ABOUT SECTION */
@@ -404,6 +404,7 @@ footer p {
 
   header {
     position: sticky;
+    background-color: #1b212d;
   }
 
   .header-download-container {
@@ -515,15 +516,15 @@ footer p {
     color: #ebebed;
   }
 
-  .product-image {
+  .demo-image {
     width: auto;
     display: flex;
     justify-content: center;
     margin-bottom: 50px;
   }
 
-  .product-image img {
-    height: 250px;
+  .demo-image img {
+    height: 300px;
     margin-bottom: 0rem;
   }
 
